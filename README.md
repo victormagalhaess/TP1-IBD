@@ -26,7 +26,7 @@ sql = f.read()
 cursor.executescript(sql)
 ```
 
-Depois é só ir copiando o códifo abaixo em um IN diferente no Jupyter e trocar o que tá entre aspas pela sua consulta SQL além de alterar o "NUMERO DA QUESTÃO" pra consulta relacionada no TP.
+Depois é só ir copiando o código abaixo em um IN diferente no Jupyter e trocar o que tá entre aspas pela sua consulta SQL além de alterar o "NUMERO DA QUESTÃO" pra consulta relacionada no TP.
 
 ``` python
 IN[4]
