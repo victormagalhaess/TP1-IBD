@@ -23,6 +23,7 @@ Em s seguida baixem o arquivo SQL que está junto com o pdf do moodle e susbtitu
 IN[3]
 f = io.open('/home/victor/Desktop/IBD/SQL/despesas_publicas_tp1.sql', 'r', encoding = 'latin-1')
 sql = f.read()
+cursor.executescript(sql)
 ```
 
 Depois é só ir copiando o código abaixo em um IN diferente no Jupyter e trocar o que tá entre aspas pela sua consulta SQL além de alterar o "NUMERO DA QUESTÃO" pra consulta relacionada no TP.
