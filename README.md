@@ -16,7 +16,7 @@ IN[2]
 conn = sqlite3.connect('./SQL/conn_despesas_publicas_tp1.db')
 cursor = conn.cursor()
 ```
-Em s seguida baixei o arquivo SQL que está junto com o pdf do moodle e susbtitui o caminho na parte de baixo. (acontecia um erro no exemplo da professora, corrigi adicionando "encoding = 'latin-1'" acredito que isso é devido aos caracteres especiais como ç e ã no banco de dados.)
+Em seguida baixei o arquivo SQL que está junto com o pdf do moodle e susbtitui o caminho na parte de baixo. (acontecia um erro no exemplo da professora, corrigi adicionando "encoding = 'latin-1'" acredito que isso é devido aos caracteres especiais como ç e ã no banco de dados.)
 
 ``` python
 IN[3]
