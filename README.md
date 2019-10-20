@@ -1,23 +1,22 @@
 # TP1-IBD
 Base pro TP1 de IBD
 
-Depois de instalar o Jupyter e executar pelo Anaconda tal como no tutorial disponível no TP, o exemplo fornecido não roda pois o SQL default possui caracteres inválidos pro UTF-8. Usem essa base como exemplo:
+Depois de instalar o Jupyter e executar pelo Anaconda tal como no tutorial disponível no TP, o exemplo fornecido não rodou, acredito que é porque o SQL default possui caracteres inválidos pro UTF-8. Utilizei essa base como exemplo:
 
 ``` python
 IN[1] : 
 import io
 import sqlite3
 import pandas as pd
-import matplotlib.pyplot as plt
 ```
-Em seguida criem uma pasta e coloquem o endereço dela no lugar de './SQL/' (mantenham o 'conn_despesas_publicas_tp1.db' no final do caminho, mesmo que esse arquivo não exista ele será criado.
+Em seguida criei uma pasta e coloquei o endereço dela no lugar de './SQL/' ('mantive o conn_despesas_publicas_tp1.db' no final do caminho, mesmo que esse arquivo não exista ele será criado).
 
 ``` python
 IN[2]
 conn = sqlite3.connect('./SQL/conn_despesas_publicas_tp1.db')
 cursor = conn.cursor()
 ```
-Em s seguida baixem o arquivo SQL que está junto com o pdf do moodle e susbtituam o caminho na parte de baixo. (o que causava erro no exemplo da professora é a ausência do encoding = 'latin-1')
+Em s seguida baixei o arquivo SQL que está junto com o pdf do moodle e susbtitui o caminho na parte de baixo. (acontecia um erro no exemplo da professora, corrigi adicionando "encoding = 'latin-1'" acredito que isso é devido aos caracteres especiais como ç e ã no banco de dados.)
 
 ``` python
 IN[3]
@@ -26,11 +25,11 @@ sql = f.read()
 cursor.executescript(sql)
 ```
 
-Depois é só ir copiando o código abaixo em um IN diferente no Jupyter e trocar o que tá entre aspas pela sua consulta SQL além de alterar o "NUMERO DA QUESTÃO" pra consulta relacionada no TP.
+Depois é só ir copiando o código abaixo em um IN diferente no Jupyter e trocar o que está entre aspas pela consulta SQL além de alterar o "NUMERO DA QUESTÃO" pra consulta relacionada no TP.
 
 ``` python
 IN[4]
 print(NUMERO DA QUESTÃO)
-df = pd.read_sql_query("SELECT SUA CONSULTA SQL FROM VOCÊS", conn)
+df = pd.read_sql_query("SELECT SUA CONSULTA SQL FROM SUA CONSULTA SQL", conn)
 df
 ```
