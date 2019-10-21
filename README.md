@@ -6,3 +6,5 @@
 Matrícula: 2019055010
 
 Consultas: 1,6,7,2,3,4 + 12,13,14,15
+
+Link para a github pages com as consultas.html: https://victormagalhaess.github.io/TP1-IBD/
